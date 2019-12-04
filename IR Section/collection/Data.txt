@@ -1,0 +1,6 @@
+ID      F-NAME      L-NAME      CGPA       HOURS
+20181496760   HASSAN      MAHMOUD     2.99       67
+20181496583    Malika         Ali     4.00       77
+20172689357    Mohamed         youseef     3.00       32
+20161472583    Youstina         Nabil     3.8       150
+20181987520    Dina         Farouq     2.7       12

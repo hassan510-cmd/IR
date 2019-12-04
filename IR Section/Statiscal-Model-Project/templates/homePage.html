@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+    <!-- <link rel="stylesheet" media="screen" href="../static/style.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body >
+               
+    <form action="/منغير توليد حروف" method="POST">
+        <div class="form-group">
+		    <label class="form-control-plaintext" >query : </label>
+		    <input type="text" class="form-control" name="queryinput" placeholder="Enter the query ex: A B B C .etc" required>
+	
+        </div>
+		<input type="submit" class="btn btn-success" value="search" >
+	</form>
+    <h5>{{query}}</h5>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pygal</title>
+        <link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+    </head>
+        
+    <body >
+        <nav class="navbar bg-dark navbar-dark navbar-expand-sm">
+        <ul class="nav navbar-nav" style="visibility: visible;">
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="/Line">Line</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="/Time">Time</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="/Histogram">Histogram</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="/XY">XY</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="/Pie">Pie</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="/Gauge">Gauge</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-item nav-link" href="/SolidGauge">SolidGauge</a>
+            </li>
+        </ul>
+        
+        </nav>
+
+        <main  class="container" >   
+            <div  align="left">
+                    <embed type="image/svg+xml" src="{{graphdata}}" style="max-width:800px"/>
+            </div>
+        </main> 
+    </body>
+        
+     
+</html>

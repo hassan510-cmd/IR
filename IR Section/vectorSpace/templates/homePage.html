@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <link rel="stylesheet" media="screen" href="../static/bootstrap.css"> -->
+    <!-- <link rel="stylesheet" media="screen" href="../static/style.css"> -->
+    <link rel="stylesheet" media="screen" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body class="container">
+               
+    <form action="/منغير توليد حروف" method="POST" class="text-center">
+        <div class="form-group">
+		    <label class="form-control-plaintext" ><h1>IR Project</h1> </label>
+		    <input type="text" class="form-control " name="queryinput" placeholder="Enter the query ex: A B B C .etc" required>
+	
+        </div>
+        <input type="submit" class="btn btn-danger " value="search" >
+    </form>
+    <h2>{{error}}</h2>
+    
+    <h1 class="table table-dark" style="border-radius: 10px;
+    padding: 6px;" >Vector Space Result</h1>
+
+    <table class="table table-striped">
+
+        {% for x in query %}
+        <tr>    
+        <th>{{x|replace("('","")|replace(","," = ")|replace(")","")|replace("'","")}}</th>
+        </tr>
+        {% endfor %}
+        
+    </table>
+    
+    <h1 class="table table-dark" style="border-radius: 10px;
+    padding: 6px;">Auothority & Hubs</h1>
+    <!-- <span class="btn-danger">gfdgdfgdfg</span> -->
+    
+
+
+    <table class="table table-striped">
+        <th>Document Name</th>
+        
+        
+            {% for docName , HAscore in list.items() %}
+            <th>{{docName}}</th>
+            {% endfor %}
+        
+
+           
+            <tr>
+                <td>Hubs Score</td>
+                {% for docName , HAscore in list.items() %}
+                <th>{{HAscore['H']}}</th>
+                {% endfor %}
+    
+            </tr>
+            <tr>
+                <td>Authority Score</td>
+                {% for docName , HAscore in list.items() %}
+                <th>{{HAscore['A']}}</th>
+                {% endfor %} 
+    
+            </tr>
+           
+    </table>
+    <div style="display: grid;grid-template-columns: 54% 46%;" >
+  
+    
+        <div  >
+            <embed type="image/svg+xml" src="{{graph}}" style="max-width:800px"/>
+        </div>
+
+
+        <div>    
+                <img src="../static/simple_path.png" alt="img" style="width:100%">
+
+            
+        </div>
+    </div>
+</body>
+
+</html>

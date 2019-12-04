@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" media="screen" href="static/bootstrap.min.css">
+</head>
+<body>
+       
+    <form action="/form" method="POST">
+        <div class="form-group">
+		    <label class="form-control-plaintext" >username : </label>
+		    <input type="text" class="form-control" name="username" placeholder="What's your name?" required>
+		    <label class="form-control-plaintext">email :</label>
+            <input type="text" class="form-control" name="email" required>
+        </div>
+		<input type="submit" class="btn btn-success" >
+	</form>
+    <form class="form-inline md-form mr-auto mb-4">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn aqua-gradient btn-rounded btn-sm my-0" type="submit">Search</button>
+          </form>
+	
+</body>
+</html>
